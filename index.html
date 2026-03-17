@@ -543,14 +543,8 @@
       display: flex; align-items: center; gap: 0.5rem; cursor: pointer;
       font-family: var(--font-serif); font-size: 0.85rem; color: var(--text-light);
     }
-    .radio-opt input { display: none; }
-    .radio-c {
-      width: 16px; height: 16px; border: 1.5px solid rgba(176,137,104,0.3);
-      border-radius: 50%; position: relative; transition: border-color 0.3s; flex-shrink: 0;
-    }
-    .radio-opt input:checked + .radio-c { border-color: var(--gold); }
-    .radio-opt input:checked + .radio-c::after {
-      content:''; position: absolute; inset: 3px; background: var(--gold); border-radius: 50%;
+    .radio-opt input[type="radio"] {
+      accent-color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; margin: 0;
     }
     .submit-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -942,8 +936,8 @@
             <div class="f-field attend-field">
               <p class="f-lbl">Will you attend?</p>
               <div class="radio-row">
-                <label class="radio-opt"><input type="radio" name="attending" value="yes" required><span class="radio-c"></span><span>Joyfully Accept</span></label>
-                <label class="radio-opt"><input type="radio" name="attending" value="no"><span class="radio-c"></span><span>Regretfully Decline</span></label>
+                <label class="radio-opt"><input type="radio" name="attending" value="yes" required><span>Joyfully Accept</span></label>
+                <label class="radio-opt"><input type="radio" name="attending" value="no"><span>Regretfully Decline</span></label>
               </div>
             </div>
           </div>
